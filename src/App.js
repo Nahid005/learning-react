@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import ClassComponent from './component/class_component/ClassComponent'
+import FanctionalComponent from './component/functionalComponent/FunctionalComponent'
+import StateHandlingClass from './component/class_component/StateHandlingClass'
+import StateHandlingFunc from './component/functionalComponent/StateHandlingFunc'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ClassComponent />
+      <FanctionalComponent />
+      <StateHandlingClass />
+      <StateHandlingFunc />
     </div>
   );
 }
