@@ -5,7 +5,8 @@ import StateHandlingClass from './component/classComponent/StateHandlingClass'
 import StateHandlingFunc from './component/functionalComponent/StateHandlingFunc'
 import PropsClass from './component/classComponent/PropsClass'
 import PropsFunc from './component/functionalComponent/PropsFunc'
-import FromHandleClass from './component/classComponent/FromHandleClass'
+import FormHandleClass from './component/classComponent/FormHandleClass'
+import FormHandleFunc from './component/functionalComponent/formHandleFunc'
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       <StateHandlingFunc />
       <PropsClass title = " Hello Bangladesh " />
       <PropsFunc title = " Germany Munich " />
-      <FromHandleClass />
+      <FormHandleClass />
+      <FormHandleFunc />
     </div>
   );
 }
