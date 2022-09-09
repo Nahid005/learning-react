@@ -7,6 +7,7 @@ import PropsClass from './component/classComponent/PropsClass'
 import PropsFunc from './component/functionalComponent/PropsFunc'
 import FormHandleClass from './component/classComponent/FormHandleClass'
 import FormHandleFunc from './component/functionalComponent/formHandleFunc'
+import Home from './component/todoApp/Home'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <PropsFunc title = " Germany Munich " />
       <FormHandleClass />
       <FormHandleFunc />
+      <Home />
     </div>
   );
 }
