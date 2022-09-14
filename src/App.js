@@ -8,6 +8,7 @@ import PropsFunc from './component/functionalComponent/PropsFunc'
 import FormHandleClass from './component/classComponent/FormHandleClass'
 import FormHandleFunc from './component/functionalComponent/formHandleFunc'
 import Home from './component/todoApp/Home'
+import UseEffect from './component/functionalComponent/UseEffect'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <PropsFunc title = " Germany Munich " />
       <FormHandleClass />
       <FormHandleFunc />
+      <UseEffect />
       <Home />
     </div>
   );
