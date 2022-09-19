@@ -1,9 +1,42 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
-function UseEffect() {
+function UserInfo (props) {
+
+    const {name, username, email, address} = props.singleUser
+
     return(
         <div>
-            <h1> Hello useEffect </h1>
+            <article>
+                <p> {name} </p>
+                <p> {username} </p>
+                <p> {email} </p>
+                <p> {address.city} </p>
+            </article>
+        </div>
+    )
+}
+
+function UseEffect() {
+
+    const [user, setUser] = useState(null)
+
+    useEffect(()=> {
+
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then((res) => {
+            return res.json()
+        })
+        .then((data)=> {
+            setUser(data)
+        }) 
+
+    }, [user])
+
+    return(
+        <div>
+            {user && (
+                user.map((singleUser) => <UserInfo key = {singleUser.id} singleUser = {singleUser} /> )
+            )}
         </div>
     )
 }

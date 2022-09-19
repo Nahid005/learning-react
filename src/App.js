@@ -8,7 +8,8 @@ import './App.css';
 // import FormHandleClass from './component/classComponent/FormHandleClass'
 // import FormHandleFunc from './component/functionalComponent/formHandleFunc'
 // import Home from './component/todoApp/Home'
-// import UseEffect from './component/functionalComponent/UseEffect'
+import UseEffect from './component/functionalComponent/UseEffect'
+
 import Toggle from './component/toggle/Toggle'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <FormHandleFunc />
       <UseEffect />
       <Home /> */}
+      <UseEffect />
       <Toggle />
     </div>
   );
