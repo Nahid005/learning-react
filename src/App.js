@@ -8,9 +8,9 @@ import './App.css';
 // import FormHandleClass from './component/classComponent/FormHandleClass'
 // import FormHandleFunc from './component/functionalComponent/formHandleFunc'
 // import Home from './component/todoApp/Home'
-import UseEffect from './component/functionalComponent/UseEffect'
-
-import Toggle from './component/toggle/Toggle'
+// import UseEffect from './component/functionalComponent/UseEffect'
+// import Toggle from './component/toggle/Toggle'
+import UseRef from './component/functionalComponent/UseRef';
 
 function App() {
   return (
@@ -24,9 +24,11 @@ function App() {
       <FormHandleClass />
       <FormHandleFunc />
       <UseEffect />
-      <Home /> */}
+      <Home /> 
       <UseEffect />
       <Toggle />
+      */}
+      <UseRef />
     </div>
   );
 }
