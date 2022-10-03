@@ -9,10 +9,8 @@ const UseRef = () => {
     const submitHandle = (e) => {
         e.preventDefault()
         setUser(name.current.value, password.current.value);
-        
     }
 
-    console.log(user)
     return (
         <div>
             <form onSubmit={submitHandle}>
