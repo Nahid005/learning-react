@@ -10,7 +10,14 @@ import './App.css';
 // import Home from './component/todoApp/Home'
 // import UseEffect from './component/functionalComponent/UseEffect'
 // import Toggle from './component/toggle/Toggle'
-import UseRef from './component/functionalComponent/UseRef';
+// import UseRef from './component/functionalComponent/UseRef';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Home from './component/pages/Home'
+import About from './component/pages/About'
+import Blog from './component/pages/Blog'
+import Service from './component/pages/Service'
+import Contact from './component/pages/Contact'
+import Navbar from './component/layout/Navbar';
 
 function App() {
   return (
@@ -28,7 +35,23 @@ function App() {
       <UseEffect />
       <Toggle />
       */}
-      <UseRef />
+      {/* <UseRef /> */}
+
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/about' element={<About />}></Route>
+          <Route path='/blog' element={<Blog />}></Route>
+          <Route path='/contact' element={<Contact />}></Route>
+          <Route path='/service' element={<Service />}></Route>
+        </Routes>
+      </BrowserRouter>
+
+
+
+
+
     </div>
   );
 }
