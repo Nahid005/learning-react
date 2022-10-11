@@ -2,8 +2,7 @@ import React, {useEffect, useState} from 'react'
 
 const Home = () => {
 
-    const [datas, setData] = useState(null)
-    const [isLoading, setIsLoading] = useState(true)
+    const [datas, setData] = useState()
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
@@ -11,26 +10,20 @@ const Home = () => {
                 return res.json()
             })
             .then((data) => {
-                setData(data)
-                setIsLoading(false)
+                return setData(data)
             })
             .catch((error) => {
                 console.log(error)
-                setIsLoading(false)
             })
     },[])
+
+
+    
 
     return(
         <div>
             {
-                datas.map((data) => {
-                    return (
-                        <div>
-                            <p> {isLoading && <p> loading   </p> } </p>
-                            <p> {data.name} </p>
-                        </div>
-                    )
-                })
+                console.log(datas)
             }
         </div>
     )

@@ -11,17 +11,21 @@ import './App.css';
 // import UseEffect from './component/functionalComponent/UseEffect'
 // import Toggle from './component/toggle/Toggle'
 // import UseRef from './component/functionalComponent/UseRef';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import Home from './component/pages/Home'
-import About from './component/pages/About'
-import Blog from './component/pages/Blog'
-import Service from './component/pages/Service'
-import Contact from './component/pages/Contact'
-import Navbar from './component/layout/Navbar';
+// import {BrowserRouter, Routes, Route} from 'react-router-dom'
+// import Home from './component/pages/Home'
+// import About from './component/pages/About'
+// import Blog from './component/pages/Blog'
+// import Service from './component/pages/Service'
+// import Contact from './component/pages/Contact'
+// import Navbar from './component/layout/Navbar';
+// import UseRefHooks from './component/functionalComponent/useRefHooks';
+import UseReducer from './component/functionalComponent/UseReducer';
 
 function App() {
   return (
     <div className="App">
+      <UseReducer />
+      {/* <UseRefHooks /> */}
       {/* <ClassComponent />
       <FanctionalComponent />
       <StateHandlingClass />
@@ -37,7 +41,7 @@ function App() {
       */}
       {/* <UseRef /> */}
 
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />}></Route>
@@ -46,7 +50,7 @@ function App() {
           <Route path='/contact' element={<Contact />}></Route>
           <Route path='/service' element={<Service />}></Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
 
     </div>
   );
