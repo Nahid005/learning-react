@@ -20,10 +20,13 @@ import './App.css';
 // import Navbar from './component/layout/Navbar';
 // import UseRefHooks from './component/functionalComponent/useRefHooks';
 import UseReducer from './component/functionalComponent/UseReducer';
+// import CustomHooks from './component/functionalComponent/CustomHooks';
 
 function App() {
   return (
     <div className="App">
+      {/* <CustomHooks /> */}
+      {/* <UseEffect /> */}
       <UseReducer />
       {/* <UseRefHooks /> */}
       {/* <ClassComponent />
