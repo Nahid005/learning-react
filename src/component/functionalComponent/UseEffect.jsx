@@ -28,15 +28,14 @@ function UseEffect() {
         })
         .then((data)=> {
             setUser(data)
+            console.log(data)
         }) 
 
-    }, [user])
+    }, [])
 
     return(
         <div>
-            {user && (
-                user.map((singleUser) => <UserInfo key = {singleUser.id} singleUser = {singleUser} /> )
-            )}
+            {user && user.map((singleUser) => <UserInfo key = {singleUser.id} singleUser = {singleUser} /> )}
         </div>
     )
 }

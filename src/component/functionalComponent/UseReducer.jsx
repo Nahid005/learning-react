@@ -1,34 +1,39 @@
-import React, {useState, useReducer} from 'react'
+import React, {useReducer} from 'react'
+
+const listData = [
+    {
+        id: 1,
+        title: 'this is a list 1 '
+    },
+    {
+        id: 2,
+        title: 'this is a list 2 '
+    },
+    {
+        id: 3,
+        title: 'this is a list 3 '
+    }
+]
 
 const UseReducer = () => {
 
-    const listData = [
-        {
-            id: 1,
-            title: 'this is a list 1 '
-        },
-        {
-            id: 2,
-            title: 'this is a list 2 '
-        },
-        {
-            id: 3,
-            title: 'this is a list 3 '
-        }
-    ]
-
-    const [list, setList] = useState(listData)
-    const [data, dispatch] = useReducer(reducer, listItems )
-
     const reducer = (state, action) => {
-
+        return state
     }
 
-    const handleSubmit = () => {
+    const [data, dispatch] = useReducer(reducer, {
+        books: listData,
+        modalIsOpen : false,
+        isLoading: true
+    } )
 
+    const handleSubmit = (event) => {
+        event.preventDefault()
+
+        const addNewBook = 
+
+        dispatch({type: "ADD", payload:''})
     }
-
-    console.log(list)
 
     return (
         <div>
@@ -49,17 +54,6 @@ const UseReducer = () => {
             </form>
             <div>
                 <h4> Data List </h4>
-
-                {
-                    list.map((singleLIst) => {
-                        const {title, id} = singleLIst
-                        return(
-                            <ul key={id}>
-                                <li> {title} </li>
-                            </ul>
-                        )
-                    })
-                }
 
 
             </div>
