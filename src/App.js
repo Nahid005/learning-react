@@ -21,10 +21,12 @@ import './App.css';
 // import UseRefHooks from './component/functionalComponent/useRefHooks';
 import UseReducer from './component/functionalComponent/UseReducer';
 // import CustomHooks from './component/functionalComponent/CustomHooks';
+// import Component1 from './component/functionalComponent/ContaxtApi/Component1';
 
 function App() {
   return (
     <div className="App">
+      {/* <Component1 /> */}
       {/* <CustomHooks /> */}
       {/* <UseEffect /> */}
       <UseReducer />
