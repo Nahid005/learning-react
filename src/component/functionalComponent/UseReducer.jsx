@@ -1,4 +1,4 @@
-import React, {useReducer} from 'react'
+import React, {useState,useReducer} from 'react'
 
 const listData = [
     {
@@ -17,8 +17,16 @@ const listData = [
 
 const UseReducer = () => {
 
+    const [bookName, setBookName] = useState("")
+
     const reducer = (state, action) => {
-        return state
+        if(action.type === "ADD"){
+            const allBooks = [...state.books, action.payload]
+            return {
+                ...state,
+                books:allBooks
+            }
+        }
     }
 
     const [data, dispatch] = useReducer(reducer, {
@@ -29,14 +37,12 @@ const UseReducer = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-
-        const addNewBook = 
-
-        dispatch({type: "ADD", payload:''})
+        const newBook = {id:new Date().getTime().toString(), name:bookName}
+        dispatch({type: "ADD", payload:newBook})
     }
 
     const handelCange = (e) => {
-        console.log(e.target.value)
+        setBookName(e.target.value)
     }
 
     return (
@@ -44,13 +50,15 @@ const UseReducer = () => {
             <form onSubmit={handleSubmit}>
                 <div> 
                     <label htmlFor="userName"> User Name: </label>
-                    <input type="text" name="userName" id="" onChange = {handelCange}/>
+                    <input type="text" name="userName" id="" value={bookName} onChange = {handelCange}/>
                 </div>
                 <button type='submit'> get data view </button>
             </form>
             <div>
                 <h4> Data List </h4>
-
+                    {
+                        data.books.map((list) => <p key={list.id}> {list.title} </p> )
+                    }
 
             </div>
         </div>

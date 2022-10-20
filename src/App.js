@@ -19,17 +19,19 @@ import './App.css';
 // import Contact from './component/pages/Contact'
 // import Navbar from './component/layout/Navbar';
 // import UseRefHooks from './component/functionalComponent/useRefHooks';
-import UseReducer from './component/functionalComponent/UseReducer';
+// import UseReducer from './component/functionalComponent/UseReducer';
 // import CustomHooks from './component/functionalComponent/CustomHooks';
 // import Component1 from './component/functionalComponent/ContaxtApi/Component1';
+import RouterComponent from './component/functionalComponent/Router';
 
 function App() {
   return (
     <div className="App">
+      <RouterComponent />
       {/* <Component1 /> */}
       {/* <CustomHooks /> */}
       {/* <UseEffect /> */}
-      <UseReducer />
+      {/* <UseReducer /> */}
       {/* <UseRefHooks /> */}
       {/* <ClassComponent />
       <FanctionalComponent />
